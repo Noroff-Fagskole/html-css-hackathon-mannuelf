@@ -16,6 +16,23 @@ body {
   line-height: 1.4;
 }
 
+.color-red {
+  color: red;
+}
+
+/*
+ Mobile: 320px, 
+ Tablet: 767px, 
+ Desktop: 1024px
+*/
+main img {
+  width: 100%;
+  max-width: 620px;
+
+  margin: 0 auto 0 auto;
+  display: block;
+}
+
 .app-header {
   border-bottom: 1px solid #999;
   padding-bottom: 1em;
@@ -31,7 +48,7 @@ body {
 }
 
 .app-logo img {
-  width: 160px;
+  min-width: 160px;
 }
 
 .app-navigation {
