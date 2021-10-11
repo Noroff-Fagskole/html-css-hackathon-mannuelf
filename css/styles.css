@@ -1,3 +1,72 @@
+@font-face {
+  font-family: 'Lobster';
+  src: url('../fonts/lobster/lobster-regular.ttf') format('truetype'),
+    url('../fonts/open_sans/static/OpenSans/OpenSans-Bold.ttf')
+      format('truetype'),
+    url('../fonts/open_sans/static/OpenSans/OpenSans-Light.ttf')
+      format('truetype');
+}
+
 body {
   background-color: #eee;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  color: #444;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.app-header {
+  border-bottom: 1px solid #999;
+  padding-bottom: 1em;
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.app-logo {
+  display: inline-block;
+}
+
+.app-logo img {
+  width: 160px;
+}
+
+.app-navigation {
+  float: right;
+}
+
+/* 
+ links have 4 states...
+ a:link, a:visited, a:active, a:hover 
+*/
+.app-navigation a:link {
+  text-decoration: none;
+  color: #444;
+  padding: 0.5em;
+}
+
+.app-navigation a:visited {
+  color: #444;
+}
+
+.app-navigation a:active {
+  color: greenyellow;
+}
+
+.app-navigation a:hover {
+  color: paleturquoise;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  font-family: 'Open Sans';
+  font-weight: 100;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
 }
