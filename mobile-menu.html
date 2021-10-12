@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        background-color: azure;
+      }
+
+      nav {
+        /*hide nav on load*/
+        display: block;
+        background: #fff;
+        padding: 0.5em;
+        border-bottom: 2px solid green;
+        /* animate: default state on page load */
+        transition: all 0.4s linear;
+        transform: translateX(-110%);
+      }
+
+      #hamburger-menu:checked ~ nav {
+        /*show nav on :checked */
+        display: block;
+        /* animate into page show state */
+        transform: translateX(0%);
+      }
+
+      .sr-only {
+        display: none;
+      }
+
+      #hamburger-menu {
+        /* hide the checkbox */
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="hamburger-menu">
+      <span class="sr-only">Hamburger menu</span>
+      <i class="fas fa-bars"></i>
+    </label>
+    <input id="hamburger-menu" type="checkbox" />
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
