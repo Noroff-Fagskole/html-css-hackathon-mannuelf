@@ -77,6 +77,53 @@ main img {
   color: paleturquoise;
 }
 
+.app-navigation-drawer {
+  /*hide nav on load*/
+  display: block;
+  background: #fff;
+  padding: 0.5em;
+  border-bottom: 2px solid green;
+  /* animate: default state on page load */
+  transition: all 0.4s linear;
+  transform: translateY(-150%);
+}
+
+#hamburger-menu:checked ~ .app-navigation-drawer {
+  /*show nav on :checked */
+  display: block;
+  /* animate into page show state */
+  transform: translateY(0%);
+}
+
+.sr-only {
+  display: none;
+}
+
+#hamburger-menu {
+  /* hide the checkbox */
+  display: none;
+}
+
+#hamburger-menu label {
+  cursor: pointer;
+}
+
+/* CSS Comment */
+@media screen and (min-width: 767px) {
+  .app-article {
+    display: inline-block;
+    border: 1px solid red;
+    width: 60%;
+  }
+
+  .app-sidebar {
+    display: inline-block;
+    border: 1px solid green;
+    width: 35%;
+    vertical-align: top;
+  }
+}
+
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -87,3 +134,69 @@ h1 {
 p {
   font-family: 'Open Sans', sans-serif;
 }
+
+form {
+  background-color: transparent;
+}
+
+form fieldset {
+  border: 5px dashed greenyellow;
+  padding: 0.5em 0 1em 1em;
+  background-color: #fff;
+}
+
+form fieldset legend {
+  font-style: italic;
+  font-size: 2em;
+}
+
+form label {
+  display: block;
+}
+
+form h5 {
+  margin-bottom: 5px;
+}
+
+.input-text {
+  width: 90%;
+  border: 1px solid #444;
+  padding: 0.5em;
+  color: #666;
+  border-radius: 6px;
+}
+
+/* too general be more specific use a class instead.
+textarea {
+
+} */
+
+.input-text-area {
+  border-radius: 6px;
+}
+
+input[type='submit'] {
+  background-color: yellow;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+input[type='submit']:hover {
+  background-color: pink;
+}
+
+/*
+input[type='text'] {
+  background-color: #eee;
+}
+
+input[type='email'] {
+  background-color: #eee;
+}
+
+input[type='tel'] {
+  background-color: #eee;
+}
+*/

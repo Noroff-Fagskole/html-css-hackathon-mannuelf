@@ -32,26 +32,42 @@
           <img src="./img/logo.png" alt="CSS Tricks" />
         </a>
         <nav class="app-navigation">
-          <a href="/">
-            <i class="fas fa-home color-red"></i>
-            Home
-          </a>
-          <a href="./about.html">
-            <i class="fas fa-bacon"></i>
-            About
-          </a>
-          <a href="./contact.html">
-            <i class="fas fa-phone-volume"></i>
-            Contact
-          </a>
-          <a href="./login.html">
-            <i class="fas fa-lock"></i>
-            Login
-          </a>
+          <label for="hamburger-menu">
+            <span class="sr-only">Hamburger menu</span>
+            <i class="fas fa-bars"></i>
+          </label>
+          <input id="hamburger-menu" type="checkbox" />
+          <ul class="app-navigation-drawer">
+            <li>
+              <a href="/">
+                <i class="fas fa-home color-red"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="./about.html">
+                <i class="fas fa-bacon"></i>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="./contact.html">
+                <i class="fas fa-phone-volume"></i>
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="./login.html">
+                <i class="fas fa-lock"></i>
+                Login
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
 
+    <!-- HTML Comment  -->
     <main>
       <div class="inner">
         <section>
