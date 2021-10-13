@@ -83,6 +83,7 @@ main img {
   background: #fff;
   padding: 0.5em;
   border-bottom: 2px solid green;
+  list-style: none;
   /* animate: default state on page load */
   transition: all 0.4s linear;
   transform: translateY(-150%);
