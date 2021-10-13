@@ -1,0 +1,24 @@
+/* step 1 */
+nav {
+  display: block;
+  transition: all 0.1s linear;
+  transform: translateY(-110px);
+  background-color: aqua;
+  width: 100%;
+  z-index: 1;
+}
+
+/* step 3*/
+#hamburger-menu {
+  display: none;
+}
+
+/* step 2 */
+#hamburger-menu:checked ~ nav {
+  display: block;
+  transform: translateY(0px);
+}
+
+.sr-only {
+  display: none;
+}

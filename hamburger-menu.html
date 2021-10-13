@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/hamburger-menu.css" />
+    <style>
+      /* step 1 */
+      nav {
+        display: block;
+        transition: all 0.1s linear;
+        transform: translateY(-110px);
+        background-color: aqua;
+        width: 100%;
+        z-index: 1;
+      }
+
+      /* step 3*/
+      #hamburger-menu {
+        display: none;
+      }
+
+      /* step 2 */
+      #hamburger-menu:checked ~ nav {
+        display: block;
+        transform: translateY(0px);
+      }
+
+      .sr-only {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="hamburger-menu">
+      <span class="sr-only">Hamburger</span>
+      <i class="fas fa-bars"></i>
+    </label>
+    <input id="hamburger-menu" type="checkbox" />
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </body>
+</html>
