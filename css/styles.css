@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: 'Lobster';
   src: url('../fonts/lobster/lobster-regular.ttf') format('truetype'),
@@ -14,6 +19,8 @@ body {
   color: #444;
   font-weight: normal;
   line-height: 1.4;
+  margin: 0;
+  padding: 0;
 }
 
 .color-red {
@@ -26,16 +33,17 @@ body {
  Desktop: 1024px
 */
 main img {
-  width: 100%;
-  max-width: 620px;
-
-  margin: 0 auto 0 auto;
   display: block;
+  margin: 0 auto 0 auto;
+  width: 100%;
+  /*max-width: 767px;*/
 }
 
 .app-header {
   border-bottom: 1px solid #999;
   padding-bottom: 1em;
+  overflow: hidden;
+  height: 44px;
 }
 
 .inner {
@@ -109,22 +117,6 @@ main img {
   cursor: pointer;
 }
 
-/* CSS Comment */
-@media screen and (min-width: 767px) {
-  .app-article {
-    display: inline-block;
-    border: 1px solid red;
-    width: 60%;
-  }
-
-  .app-sidebar {
-    display: inline-block;
-    border: 1px solid green;
-    width: 35%;
-    vertical-align: top;
-  }
-}
-
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -188,16 +180,46 @@ input[type='submit']:hover {
   background-color: pink;
 }
 
-/*
-input[type='text'] {
-  background-color: #eee;
+.footer {
+  background-color: aqua;
+  padding: 1em;
 }
 
-input[type='email'] {
-  background-color: #eee;
+/*mobile first starts here*/
+.footer .column {
+  display: block;
+  width: 100%;
 }
 
-input[type='tel'] {
-  background-color: #eee;
-}
-*/
+@media screen and (min-width: 767px) {
+  /* I am TABLET and DESKTOP and TV Screen */
+  .app-navigation-drawer {
+    transform: translateY(0);
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .app-navigation-drawer li {
+    display: inline-block;
+  }
+
+  .app-article {
+    display: inline-block;
+    width: 59%;
+  }
+
+  .app-sidebar {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+  }
+
+  .footer .column {
+    display: inline-block;
+    width: 20%;
+  }
+} /*DESKTOP Media query ENDS HERE*/

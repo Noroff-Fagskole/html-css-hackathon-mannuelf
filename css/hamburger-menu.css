@@ -22,3 +22,19 @@ nav {
 .sr-only {
   display: none;
 }
+
+@media screen and (min-width: 767px) {
+  .app-navigation label,
+  .app-navigation .fas {
+    display: none;
+  }
+
+  .app-navigation-drawer {
+    /*show nav on load*/
+    transform: translateY(0);
+  }
+
+  .app-navigation-drawer li {
+    display: inline-block;
+  }
+}
